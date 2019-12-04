@@ -19,13 +19,13 @@ export default function App() {
           <div className="container pt-4">
             <Alert />
             <Switch>
-              <Route path="/about">
+              <Route path="/giphy-app/build/about">
                 <About />
               </Route>
-              <PrivateRouteLogin path="/login">
+              <PrivateRouteLogin path="/giphy-app/build/login">
                 <Login />
               </PrivateRouteLogin>
-              <PrivateRouteHome path="/home">
+              <PrivateRouteHome path="/giphy-app/build/home">
                 <Home />
               </PrivateRouteHome>
             </Switch>

@@ -43,24 +43,36 @@ export const Navbar = () => {
           <li className="nav-item">
             <Link
               className="nav-link"
-              to="/home"
+              to="/giphy-app/build/home"
               onClick={!user ? showInfo : null}
             >
               home
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/about" onClick={hideInfo}>
+            <Link
+              className="nav-link"
+              to="/giphy-app/build/about"
+              onClick={hideInfo}
+            >
               about
             </Link>
           </li>
           <li className="nav-item">
             {user ? (
-              <Link onClick={logoutUser} className="nav-link" to="/">
+              <Link
+                onClick={logoutUser}
+                className="nav-link"
+                to="/giphy-app/build/"
+              >
                 logout
               </Link>
             ) : (
-              <Link onClick={hideInfo} className="nav-link" to="/login">
+              <Link
+                onClick={hideInfo}
+                className="nav-link"
+                to="/giphy-app/build/login"
+              >
                 signup/login
               </Link>
             )}
