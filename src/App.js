@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { FirebaseAuth } from './context/firebase/FirebaseAuth';
+import { Navbar } from './components/Navbar';
+import { About } from './pages/About';
+import { Home } from './pages/Home';
+import { PrivateRouteHome } from './components/PrivateRouteHome';
+import { PrivateRouteLogin } from './components/PrivateRouteLogin';
+import { Login } from './components/Login';
+import { AlertState } from './context/alert/AlertState';
+import { Alert } from './components/Alert';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AlertState>
+      <FirebaseAuth>
+        <Router>
+          <Navbar />
+          <div className="container pt-4">
+            <Alert />
+            <Switch>
+              <Route path="/about">
+                <About />
+              </Route>
+              <PrivateRouteLogin path="/login">
+                <Login />
+              </PrivateRouteLogin>
+              <PrivateRouteHome path="/home">
+                <Home />
+              </PrivateRouteHome>
+            </Switch>
+          </div>
+        </Router>
+      </FirebaseAuth>
+    </AlertState>
   );
 }
-
-export default App;
