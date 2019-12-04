@@ -12,7 +12,7 @@ export const PrivateRouteHome = ({ children }) => {
         ) : (
           <Redirect
             to={{
-              pathname: '/giphy-app/build/login',
+              pathname: '/giph-app/build/login',
               state: { from: location }
             }}
           />

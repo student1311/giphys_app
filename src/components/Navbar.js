@@ -43,7 +43,7 @@ export const Navbar = () => {
           <li className="nav-item">
             <Link
               className="nav-link"
-              to="/giphy-app/build/home"
+              to="/giph-app/build/home"
               onClick={!user ? showInfo : null}
             >
               home
@@ -52,7 +52,7 @@ export const Navbar = () => {
           <li className="nav-item">
             <Link
               className="nav-link"
-              to="/giphy-app/build/about"
+              to="/giph-app/build/about"
               onClick={hideInfo}
             >
               about
@@ -63,7 +63,7 @@ export const Navbar = () => {
               <Link
                 onClick={logoutUser}
                 className="nav-link"
-                to="/giphy-app/build/"
+                to="/giph-app/build/"
               >
                 logout
               </Link>
@@ -71,7 +71,7 @@ export const Navbar = () => {
               <Link
                 onClick={hideInfo}
                 className="nav-link"
-                to="/giphy-app/build/login"
+                to="/giph-app/build/login"
               >
                 signup/login
               </Link>
