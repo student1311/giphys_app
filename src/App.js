@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import { FirebaseAuth } from './context/firebase/FirebaseAuth';
 import { Navbar } from './components/Navbar';
 import { About } from './pages/About';
@@ -14,7 +14,7 @@ export default function App() {
   return (
     <AlertState>
       <FirebaseAuth>
-        <Router basename="/">
+        <HashRouter basename="/">
           <Navbar />
           <div className="container pt-4">
             <Alert />
@@ -30,7 +30,7 @@ export default function App() {
               </PrivateRouteHome>
             </Switch>
           </div>
-        </Router>
+        </HashRouter>
       </FirebaseAuth>
     </AlertState>
   );
