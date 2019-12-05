@@ -14,18 +14,18 @@ export default function App() {
   return (
     <AlertState>
       <FirebaseAuth>
-        <Router>
+        <Router basename="/giph_app/build">
           <Navbar />
           <div className="container pt-4">
             <Alert />
             <Switch>
-              <Route path="/giph-app/build/about">
+              <Route path="/about">
                 <About />
               </Route>
-              <PrivateRouteLogin path="/giph-app/build/login">
+              <PrivateRouteLogin path="/login">
                 <Login />
               </PrivateRouteLogin>
-              <PrivateRouteHome path="/giph-app/build/home">
+              <PrivateRouteHome path="/home">
                 <Home />
               </PrivateRouteHome>
             </Switch>

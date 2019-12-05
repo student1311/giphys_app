@@ -6,14 +6,14 @@ export const PrivateRouteLogin = ({ children }) => {
   const { user } = useContext(FirebaseContext);
   return (
     <Route
-      path="/giph-app/build/login"
+      path="/login"
       render={({ location }) =>
         !user ? (
           children
         ) : (
           <Redirect
             to={{
-              pathname: '/giph-app/build/home',
+              pathname: '/home',
               state: { from: location }
             }}
           />

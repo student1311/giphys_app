@@ -43,36 +43,24 @@ export const Navbar = () => {
           <li className="nav-item">
             <Link
               className="nav-link"
-              to="/giph-app/build/home"
+              to="/home"
               onClick={!user ? showInfo : null}
             >
               home
             </Link>
           </li>
           <li className="nav-item">
-            <Link
-              className="nav-link"
-              to="/giph-app/build/about"
-              onClick={hideInfo}
-            >
+            <Link className="nav-link" to="/about" onClick={hideInfo}>
               about
             </Link>
           </li>
           <li className="nav-item">
             {user ? (
-              <Link
-                onClick={logoutUser}
-                className="nav-link"
-                to="/giph-app/build/"
-              >
+              <Link onClick={logoutUser} className="nav-link" to="/">
                 logout
               </Link>
             ) : (
-              <Link
-                onClick={hideInfo}
-                className="nav-link"
-                to="/giph-app/build/login"
-              >
+              <Link onClick={hideInfo} className="nav-link" to="/login">
                 signup/login
               </Link>
             )}
