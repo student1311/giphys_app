@@ -14,7 +14,7 @@ export default function App() {
   return (
     <AlertState>
       <FirebaseAuth>
-        <Router basename="/giph_app/build">
+        <Router basename="/">
           <Navbar />
           <div className="container pt-4">
             <Alert />
