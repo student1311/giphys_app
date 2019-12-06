@@ -25,7 +25,7 @@ export default function App() {
               <PrivateRouteLogin path="/login">
                 <Login />
               </PrivateRouteLogin>
-              <PrivateRouteHome path="/home">
+              <PrivateRouteHome path="/">
                 <Home />
               </PrivateRouteHome>
             </Switch>

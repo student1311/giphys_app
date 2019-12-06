@@ -4,6 +4,7 @@ import { FirebaseContext } from '../context/firebase/firebaseContext';
 
 export const PrivateRouteLogin = ({ children }) => {
   const { user } = useContext(FirebaseContext);
+
   return (
     <Route
       path="/login"
@@ -13,7 +14,7 @@ export const PrivateRouteLogin = ({ children }) => {
         ) : (
           <Redirect
             to={{
-              pathname: '/home',
+              pathname: '/',
               state: { from: location }
             }}
           />

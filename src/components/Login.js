@@ -19,7 +19,7 @@ export const Login = () => {
       showLoader();
     }
 
-    let { from } = location.state || { from: { pathname: '/home' } };
+    let { from } = location.state || { from: { pathname: '/' } };
     e.preventDefault();
 
     fire
